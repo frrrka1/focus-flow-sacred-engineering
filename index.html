@@ -9,18 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <!-- ff-build: breath-prism-public-trigger-20260617165320 -->
+  <link rel="stylesheet" href="hero-frequency.css" />
+  <!-- ff-build: hero-frequency-true-rebuild -->
 </head>
 <body>
   <nav class="nav-shell" aria-label="Primary">
     <a class="brand" href="#top" aria-label="Focus Flow home">
-      <span class="brand-glyph"></span>
+      <img class="brand-logo" src="assets/focus-flow-logo-reference.jpg" alt="Focus Flow logo" width="74" height="44" loading="eager" decoding="async" />
       <span>Focus Flow</span>
     </a>
-    <button class="breath-toggle" type="button" aria-label="Toggle breath field" data-breath-toggle>
-      <span></span>
-    </button>
-    <button class="menu" type="button" aria-label="Open menu" data-menu>Menu</button>
+    <button class="menu" type="button" aria-label="Open menu" aria-expanded="false" data-menu>Menu</button>
     <div class="menu-panel" data-menu-panel>
       <a href="#method">Method</a>
       <a href="#practice">Practice</a>
@@ -33,17 +31,22 @@
     <div class="hero-art" aria-hidden="true">
       <video class="hero-video" autoplay muted loop playsinline><source src="assets/hero-placeholder.mp4" type="video/mp4"></video>
       <div class="hero-video-wash"></div>
-      <canvas id="field-canvas"></canvas>
-      <div class="breath-rings">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="infinity-mark">
-        <i></i><i></i><b></b>
+      <div class="frequency-field">
+        <span class="freq-ring ring-1"></span>
+        <span class="freq-ring ring-2"></span>
+        <span class="freq-ring ring-3"></span>
+        <span class="freq-ring ring-4"></span>
+        <span class="freq-ring ring-5"></span>
+        <span class="freq-ring ring-6"></span>
+        <span class="soul-arc"></span>
+        <span class="orb-center"></span>
       </div>
     </div>
+
     <div class="hero-copy">
-      <p class="kicker">A living system for conscious life</p>
-      <h1>RETURN FROM REACTION<br>TO SOUL-LED ACTION</h1>
+      <p class="moment-line">A MOMENT TO <span class="moment-word" data-words="REMEMBER,RECONNECT,RETURN,LISTEN,CHOOSE">REMEMBER</span></p>
+      <h1 class="hero-headline">RETURN FROM REACTION<br>TO SOUL-LED ACTION</h1>
+      <p class="hero-subtitle">A living system for moving from reaction to Soul-led action.</p>
       <div class="hero-actions">
         <a href="#practice" class="btn primary">Enter the field</a>
         <a href="#method" class="btn ghost">See the method</a>
