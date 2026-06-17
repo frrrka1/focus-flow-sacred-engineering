@@ -7,3 +7,10 @@ for(let i=0;i<particles.length;i+=3){const p=particles[i],q=particles[(i+11)%par
 resize(); addEventListener('resize',resize); requestAnimationFrame(draw);
 const field=document.querySelector('.cursor-field'); addEventListener('pointermove',e=>{field.style.transform=`translate(${e.clientX-37}px,${e.clientY-37}px)`});
 document.querySelector('[data-breath-toggle]').addEventListener('click',()=>document.body.classList.toggle('still'));
+
+const menuBtn=document.querySelector('[data-menu]');
+const menuPanel=document.querySelector('[data-menu-panel]');
+if(menuBtn&&menuPanel){
+  menuBtn.addEventListener('click',()=>menuPanel.classList.toggle('open'));
+  menuPanel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menuPanel.classList.remove('open')));
+}

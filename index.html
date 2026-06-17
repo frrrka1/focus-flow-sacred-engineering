@@ -21,11 +21,19 @@
     <button class="breath-toggle" type="button" aria-label="Toggle breath field" data-breath-toggle>
       <span></span>
     </button>
-    <button class="menu" type="button" aria-label="Open menu">Menu</button>
+    <button class="menu" type="button" aria-label="Open menu" data-menu>Menu</button>
+    <div class="menu-panel" data-menu-panel>
+      <a href="#method">Method</a>
+      <a href="#practice">Practice</a>
+      <a href="#sessions">States</a>
+      <a href="#top">Soul</a>
+    </div>
   </nav>
 
   <header id="top" class="hero section-gray">
     <div class="hero-art" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline><source src="assets/hero-placeholder.mp4" type="video/mp4"></video>
+      <div class="hero-video-wash"></div>
       <canvas id="field-canvas"></canvas>
       <div class="breath-rings">
         <span></span><span></span><span></span>
