@@ -9,18 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <!-- ff-build: breath-prism-public-trigger-20260617165320 -->
+  <!-- ff-build: hero-frequency-parity-v2 -->
 </head>
 <body>
   <nav class="nav-shell" aria-label="Primary">
     <a class="brand" href="#top" aria-label="Focus Flow home">
-      <span class="brand-glyph"></span>
+      <img class="brand-logo" src="assets/focus-flow-logo-reference.jpg" alt="" width="56" height="34" loading="eager" decoding="async" />
       <span>Focus Flow</span>
     </a>
-    <button class="breath-toggle" type="button" aria-label="Toggle breath field" data-breath-toggle>
-      <span></span>
-    </button>
-    <button class="menu" type="button" aria-label="Open menu" data-menu>Menu</button>
+    <button class="menu" type="button" aria-label="Open menu" aria-expanded="false" data-menu>Menu</button>
     <div class="menu-panel" data-menu-panel>
       <a href="#method">Method</a>
       <a href="#practice">Practice</a>
@@ -34,16 +31,58 @@
       <video class="hero-video" autoplay muted loop playsinline><source src="assets/hero-placeholder.mp4" type="video/mp4"></video>
       <div class="hero-video-wash"></div>
       <canvas id="field-canvas"></canvas>
-      <div class="breath-rings">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="infinity-mark">
-        <i></i><i></i><b></b>
+
+      <div class="mobius-stage">
+        <div class="breath-halo halo-one"></div>
+        <div class="breath-halo halo-two"></div>
+        <svg class="mobius-svg" viewBox="0 0 900 480" role="img" aria-label="Breathing Focus Flow Möbius field">
+          <defs>
+            <linearGradient id="mobiusPrism" x1="80" y1="420" x2="810" y2="70" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D0B05A" stop-opacity=".96" />
+              <stop offset=".22" stop-color="#8D73FF" stop-opacity=".9" />
+              <stop offset=".52" stop-color="#7EDBFF" stop-opacity=".98" />
+              <stop offset=".77" stop-color="#685BFF" stop-opacity=".88" />
+              <stop offset="1" stop-color="#FFF0BE" stop-opacity=".95" />
+            </linearGradient>
+            <linearGradient id="soulEdge" x1="160" y1="360" x2="760" y2="80" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
+              <stop offset=".13" stop-color="#FFE6A3" stop-opacity=".9" />
+              <stop offset=".35" stop-color="#7EDBFF" stop-opacity=".12" />
+              <stop offset=".82" stop-color="#FFE6A3" stop-opacity=".75" />
+              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
+            </linearGradient>
+            <filter id="mobiusGlow" x="-30%" y="-45%" width="160%" height="190%">
+              <feGaussianBlur stdDeviation="9" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.66  0 0 0 0 1  0 0 0 .7 0" result="glow" />
+              <feMerge>
+                <feMergeNode in="glow"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <path class="mobius-shadow" d="M139 240C188 98 334 91 453 239C572 386 713 382 762 240C811 98 665 91 546 239C427 386 188 382 139 240Z"/>
+          <path class="mobius-ribbon ribbon-a" d="M139 240C188 98 334 91 453 239C572 386 713 382 762 240C811 98 665 91 546 239C427 386 188 382 139 240Z"/>
+          <path class="mobius-ribbon ribbon-b" d="M152 242C199 127 333 119 449 242C565 366 700 359 748 242C796 126 664 119 550 242C436 366 199 359 152 242Z"/>
+          <path class="mobius-thread thread-one" d="M139 240C188 98 334 91 453 239C572 386 713 382 762 240C811 98 665 91 546 239C427 386 188 382 139 240Z"/>
+          <path class="mobius-thread thread-two" d="M152 242C199 127 333 119 449 242C565 366 700 359 748 242C796 126 664 119 550 242C436 366 199 359 152 242Z"/>
+          <path class="soul-edge" d="M139 240C188 98 334 91 453 239C572 386 713 382 762 240"/>
+          <g class="neural-dust">
+            <circle cx="205" cy="178" r="2.4"/><circle cx="266" cy="132" r="1.8"/><circle cx="368" cy="167" r="2"/>
+            <circle cx="444" cy="239" r="2.7"/><circle cx="526" cy="314" r="1.9"/><circle cx="637" cy="349" r="2.2"/>
+            <circle cx="726" cy="292" r="1.8"/><circle cx="674" cy="123" r="2.1"/><circle cx="555" cy="169" r="1.7"/>
+            <circle cx="322" cy="322" r="2"/><circle cx="220" cy="294" r="1.9"/>
+          </g>
+        </svg>
       </div>
     </div>
+
     <div class="hero-copy">
-      <p class="kicker">A living system for conscious life</p>
-      <h1>RETURN FROM REACTION<br>TO SOUL-LED ACTION</h1>
+      <p class="kicker">Body → Mind → Soul → Action</p>
+      <h1 class="hero-headline">
+        <span class="headline-prefix">A MOMENT TO</span>
+        <span class="changing-word" data-words="RETURN,LISTEN,CHOOSE,EMBODY,REMEMBER">RETURN</span>
+      </h1>
+      <p class="hero-subtitle">A living system for moving from reaction to Soul-led action.</p>
       <div class="hero-actions">
         <a href="#practice" class="btn primary">Enter the field</a>
         <a href="#method" class="btn ghost">See the method</a>
