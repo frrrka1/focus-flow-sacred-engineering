@@ -13,14 +13,14 @@ function resizeField(){
   canvas.style.width = `${window.innerWidth}px`;
   canvas.style.height = `${window.innerHeight}px`;
 
-  const count = window.innerWidth < 700 ? 64 : 120;
+  const count = window.innerWidth < 700 ? 92 : 160;
   particles = Array.from({length: count}, (_, i) => ({
     phase: Math.random() * Math.PI * 2,
-    speed: .000035 + Math.random() * .000055,
-    offset: (Math.random() - .5) * 54 * ratio,
-    size: (.7 + Math.random() * 1.6) * ratio,
-    alpha: .18 + Math.random() * .5,
-    gold: i % 11 === 0
+    speed: .000032 + Math.random() * .000052,
+    offset: (Math.random() - .5) * 72 * ratio,
+    size: (.75 + Math.random() * 1.9) * ratio,
+    alpha: .18 + Math.random() * .54,
+    gold: i % 10 === 0
   }));
 }
 
@@ -37,21 +37,22 @@ function drawField(time = 0){
   ctx.clearRect(0, 0, w, h);
 
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
-  const centerX = w * (window.innerWidth < 900 ? .66 : .69);
-  const centerY = h * .46;
-  const scale = Math.min(w * .33, 390 * ratio);
+  const isMobile = window.innerWidth < 900;
+  const centerX = w * (isMobile ? .68 : .66);
+  const centerY = h * (isMobile ? .39 : .46);
+  const scale = Math.min(w * (isMobile ? .36 : .42), 520 * ratio);
 
   ctx.globalCompositeOperation = 'lighter';
 
   particles.forEach((p, i) => {
     const t = p.phase + time * p.speed;
     const point = lemniscate(t, scale);
-    const drift = Math.sin(time * .00025 + i) * p.offset;
+    const drift = Math.sin(time * .00022 + i) * p.offset;
 
     const x = centerX + point.x + drift;
     const y = centerY + point.y + Math.cos(time * .0002 + i * .7) * p.offset * .55;
 
-    const g = ctx.createRadialGradient(x, y, 0, x, y, p.size * 7);
+    const g = ctx.createRadialGradient(x, y, 0, x, y, p.size * 8);
     if(p.gold){
       g.addColorStop(0, `rgba(255,240,190,${p.alpha})`);
       g.addColorStop(1, 'rgba(208,176,90,0)');
@@ -62,18 +63,18 @@ function drawField(time = 0){
 
     ctx.fillStyle = g;
     ctx.beginPath();
-    ctx.arc(x, y, p.size * 6, 0, Math.PI * 2);
+    ctx.arc(x, y, p.size * 7, 0, Math.PI * 2);
     ctx.fill();
 
     if(i % 4 === 0){
-      const q = particles[(i + 9) % particles.length];
+      const q = particles[(i + 13) % particles.length];
       const qt = q.phase + time * q.speed;
       const qPoint = lemniscate(qt, scale);
       const qx = centerX + qPoint.x;
       const qy = centerY + qPoint.y;
       const dist = Math.hypot(x - qx, y - qy);
-      if(dist < 190 * ratio){
-        ctx.strokeStyle = `rgba(126,219,255,${.035 * (1 - dist / (190 * ratio))})`;
+      if(dist < 230 * ratio){
+        ctx.strokeStyle = `rgba(126,219,255,${.045 * (1 - dist / (230 * ratio))})`;
         ctx.lineWidth = ratio;
         ctx.beginPath();
         ctx.moveTo(x, y);
@@ -101,8 +102,8 @@ if(wordEl && motionOK){
       index = (index + 1) % words.length;
       wordEl.textContent = words[index];
       wordEl.classList.remove('is-changing');
-    }, 430);
-  }, 2400);
+    }, 390);
+  }, 2350);
 }
 
 const menuBtn = document.querySelector('[data-menu]');
