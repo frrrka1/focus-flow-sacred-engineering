@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="hero-frequency.css" />
-  <!-- ff-build: hero-frequency-parity-v2b -->
+  <!-- ff-build: hero-frequency-parity-v3-from-scratch -->
 </head>
 <body>
   <nav class="nav-shell" aria-label="Primary">
@@ -33,50 +33,42 @@
       <div class="hero-video-wash"></div>
       <canvas id="field-canvas"></canvas>
 
-      <div class="orbital-field">
-        <span class="orbit orbit-one"></span>
-        <span class="orbit orbit-two"></span>
-        <span class="orbit orbit-three"></span>
-        <span class="orbit orbit-four"></span>
-
-        <svg class="mobius-svg" viewBox="0 0 980 640" role="img" aria-label="Breathing Focus Flow Möbius field">
+      <div class="frequency-spiral">
+        <svg class="spiral-svg" viewBox="0 0 700 700" aria-hidden="true">
           <defs>
-            <linearGradient id="mobiusPrism" x1="70" y1="520" x2="900" y2="92" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#FFF0BE" stop-opacity=".96" />
-              <stop offset=".16" stop-color="#D0B05A" stop-opacity=".96" />
-              <stop offset=".34" stop-color="#8D73FF" stop-opacity=".86" />
-              <stop offset=".55" stop-color="#7EDBFF" stop-opacity="1" />
-              <stop offset=".76" stop-color="#685BFF" stop-opacity=".9" />
-              <stop offset="1" stop-color="#FFF0BE" stop-opacity=".9" />
+            <linearGradient id="spiralPrism" x1="120" y1="580" x2="585" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D0B05A" stop-opacity=".95" />
+              <stop offset=".26" stop-color="#685BFF" stop-opacity=".78" />
+              <stop offset=".58" stop-color="#7EDBFF" stop-opacity=".98" />
+              <stop offset=".84" stop-color="#8D73FF" stop-opacity=".82" />
+              <stop offset="1" stop-color="#FFF0BE" stop-opacity=".92" />
             </linearGradient>
-            <linearGradient id="soulEdge" x1="140" y1="510" x2="820" y2="112" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
-              <stop offset=".18" stop-color="#FFF0BE" stop-opacity=".94" />
-              <stop offset=".5" stop-color="#7EDBFF" stop-opacity=".1" />
-              <stop offset=".82" stop-color="#FFF0BE" stop-opacity=".88" />
-              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
-            </linearGradient>
-            <filter id="mobiusGlow" x="-35%" y="-50%" width="170%" height="200%">
-              <feGaussianBlur stdDeviation="12" result="blur" />
-              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.38  0 0 0 0 0.56  0 0 0 0 1  0 0 0 .72 0" result="glow" />
+            <radialGradient id="spiralMist" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#7EDBFF" stop-opacity=".28" />
+              <stop offset=".46" stop-color="#685BFF" stop-opacity=".15" />
+              <stop offset="1" stop-color="#10162A" stop-opacity="0" />
+            </radialGradient>
+            <filter id="spiralGlow" x="-35%" y="-35%" width="170%" height="170%">
+              <feGaussianBlur stdDeviation="9" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.65  0 0 0 0 1  0 0 0 .72 0" result="glow" />
               <feMerge>
                 <feMergeNode in="glow"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
-          <path class="mobius-depth" d="M128 320C198 132 348 136 490 319C632 502 782 508 852 320C922 132 772 136 630 319C488 502 198 508 128 320Z"/>
-          <path class="mobius-fill" d="M128 320C198 132 348 136 490 319C632 502 782 508 852 320C922 132 772 136 630 319C488 502 198 508 128 320Z"/>
-          <path class="mobius-inner" d="M154 322C216 172 350 174 489 322C628 470 762 468 826 322C890 176 760 174 629 322C498 470 216 468 154 322Z"/>
-          <path class="mobius-thread thread-a" d="M128 320C198 132 348 136 490 319C632 502 782 508 852 320C922 132 772 136 630 319C488 502 198 508 128 320Z"/>
-          <path class="mobius-thread thread-b" d="M154 322C216 172 350 174 489 322C628 470 762 468 826 322C890 176 760 174 629 322C498 470 216 468 154 322Z"/>
-          <path class="soul-edge" d="M128 320C198 132 348 136 490 319C632 502 782 508 852 320"/>
-          <g class="neural-dust">
-            <circle cx="206" cy="236" r="2.8"/><circle cx="282" cy="174" r="1.8"/><circle cx="382" cy="214" r="2.2"/>
-            <circle cx="490" cy="319" r="3.2"/><circle cx="590" cy="428" r="2"/><circle cx="714" cy="462" r="2.4"/>
-            <circle cx="820" cy="365" r="1.9"/><circle cx="780" cy="180" r="2.2"/><circle cx="642" cy="226" r="1.8"/>
-            <circle cx="346" cy="438" r="2"/><circle cx="220" cy="390" r="1.8"/>
+          <circle class="spiral-mist" cx="350" cy="350" r="320" fill="url(#spiralMist)" />
+          <g class="spiral-rings">
+            <circle cx="350" cy="350" r="318" />
+            <circle cx="350" cy="350" r="276" />
+            <circle cx="350" cy="350" r="234" />
+            <circle cx="350" cy="350" r="192" />
+            <circle cx="350" cy="350" r="150" />
+            <circle cx="350" cy="350" r="108" />
+            <circle cx="350" cy="350" r="66" />
           </g>
+          <path class="spiral-path" d="M 355.0 350.0 L 356.3 352.1 L 356.7 355.0 L 355.7 358.2 L 353.3 361.2 L 349.6 363.3 L 344.9 364.1 L 339.7 363.1 L 334.7 360.1 L 330.7 355.2 L 328.4 348.7 L 328.3 341.4 L 330.9 333.9 L 336.0 327.3 L 343.5 322.5 L 352.6 320.2 L 362.5 321.0 L 372.1 325.1 L 380.3 332.5 L 385.9 342.6 L 388.0 354.5 L 386.2 366.9 L 380.3 378.6 L 370.5 388.1 L 357.8 394.3 L 343.2 396.1 L 328.3 393.1 L 314.7 385.3 L 303.9 373.1 L 297.3 357.7 L 295.9 340.4 L 300.2 323.1 L 310.1 307.6 L 324.7 295.7 L 342.9 288.8 L 362.8 288.4 L 382.4 294.8 L 399.3 307.7 L 410.8 326.0 L 415.2 347.7 L 411.8 370.3 L 400.5 391.3 L 382.2 407.9 L 358.7 417.5 L 332.4 419.0 L 306.5 411.9 L 284.3 396.2 L 268.5 373.5 L 261.1 346.4 L 263.2 317.8 L 275.2 290.8 L 296.0 268.6 L 323.4 254.4 L 354.8 250.3 L 386.8 257.1 L 415.5 274.4 L 437.1 300.5 L 448.7 332.7 L 448.3 367.9 L 435.3 402.2 L 410.6 431.3 L 376.9 451.6 L 338.2 459.8 L 298.6 454.5 L 262.4 435.7 L 233.9 405.5 L 216.9 367.0 L 214.0 324.2 L 225.9 281.4 L 252.0 243.8 L 290.3 216.2 L 337.0 202.8 L 386.4 205.6 L 432.2 225.2 L 469.3 259.7 L 493.0 305.2 L 500.4 357.4 L 490.0 410.6 L 462.5 458.7 L 420.1 496.1 L 367.3 517.3 L 309.1 519.8 L 251.8 501.9 L 202.3 464.8 L 166.5 412.8 L 148.7 351.6 L 151.8 286.8 L 176.3 224.6 L 220.2 171.4 L 280.0 133.9 L 349.7 118.0 L 422.4 126.1 L 490.0 158.6 L 546.1 213.0 L 584.4 283.6 L 600.1 363.9 L 591.1 446.0 L 557.3 521.0 L 502.1 581.7" />
+          <path class="spiral-gold" d="M 214.0 324.2 L 225.9 281.4 L 252.0 243.8 L 290.3 216.2 L 337.0 202.8 L 386.4 205.6 L 432.2 225.2 L 469.3 259.7 L 493.0 305.2 L 500.4 357.4 L 490.0 410.6 L 462.5 458.7 L 420.1 496.1" />
         </svg>
       </div>
     </div>
