@@ -13,3 +13,8 @@ if(menuBtn&&menuPanel){
   menuBtn.addEventListener('click',()=>menuPanel.classList.toggle('open'));
   menuPanel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menuPanel.classList.remove('open')));
 }
+
+const ffWords=['RETURN','LISTEN','CHOOSE','EMBODY','REMEMBER'];
+const ffWord=document.querySelector('[data-word]');
+let ffWordIndex=0;
+if(ffWord){setInterval(()=>{ffWordIndex=(ffWordIndex+1)%ffWords.length;ffWord.animate([{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(8px)'}],{duration:220,easing:'ease-out'}).onfinish=()=>{ffWord.textContent=ffWords[ffWordIndex];ffWord.animate([{opacity:0,filter:'blur(8px)'},{opacity:1,filter:'blur(0px)'}],{duration:420,easing:'ease-out'});};},2200);}
