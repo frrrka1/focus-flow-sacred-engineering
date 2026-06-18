@@ -3,105 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Focus Flow — Hero Moodboard</title>
-  <meta name="description" content="Four high-impact hero directions for Focus Flow." />
+  <title>Focus Flow — Infinity Field</title>
+  <meta name="description" content="Focus Flow is a living operating system for returning from reaction to Soul-led action." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="hero-frequency.css" />
-  <!-- ff-build: moodboard-wow-directions -->
+  <!-- ff-build: infinity-mobius-hero -->
 </head>
 <body>
-  <nav class="nav-shell" aria-label="Moodboard navigation">
-    <a class="brand" href="#top" aria-label="Focus Flow moodboard home">
+  <nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Focus Flow home">
       <img class="brand-logo" src="assets/focus-flow-logo-reference.jpg" alt="Focus Flow logo" width="70" height="44" loading="eager" decoding="async" />
       <span>Focus Flow</span>
     </a>
     <button class="menu" type="button" aria-expanded="false" data-menu>Menu</button>
     <div class="menu-panel" data-menu-panel>
-      <a href="#portal">Portal</a>
-      <a href="#ritual">Ritual</a>
-      <a href="#cosmos">Cosmos</a>
-      <a href="#reactor">Reactor</a>
+      <a href="#top">Hero</a>
+      <a href="#method">Method</a>
+      <a href="#practice">Practice</a>
+      <a href="#field">Field</a>
     </div>
   </nav>
 
-  <main id="top" class="moodboard">
-    <section class="mood-intro" aria-labelledby="mood-title">
-      <p class="eyebrow">Focus Flow · Hero moodboard</p>
-      <h1 id="mood-title">Four possible first screens. No quiet luxury. More wow.</h1>
-      <p class="intro-copy">Pick the direction with the strongest gut reaction. The winner becomes the only direction we develop into the actual site.</p>
-      <div class="audit-grid" aria-label="CED audit">
-        <article><span>Pattern</span><strong>2 → 6</strong><p>Old hero had no authored visual language.</p></article>
-        <article><span>Function</span><strong>3 → 5</strong><p>First screen did not tell people what to choose.</p></article>
-        <article><span>Tension</span><strong>2 → 6</strong><p>No memory anchor. This page tests four anchors.</p></article>
-      </div>
-      <p class="selected-status" role="status" data-selected-status>No direction selected yet.</p>
-    </section>
-
-    <section id="portal" class="direction direction-portal" data-direction="A · Breath Portal" aria-labelledby="portal-title">
-      <div class="direction-copy">
-        <p class="concept-label">A · Frequency / Open inspired</p>
+  <main id="top" class="hero-page">
+    <section class="hero-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
         <p class="moment-line">A MOMENT TO <span data-words="REMEMBER,RECONNECT,RETURN,LISTEN,CHOOSE">REMEMBER</span></p>
-        <h2 id="portal-title">Enter the breathing portal</h2>
-        <p>Closest to Frequency: a giant animated portal, editorial typography, soft glass nav, and the feeling that the page is breathing before the user touches anything.</p>
-        <ul class="scoreline">
-          <li>Pattern 6</li><li>Function 5</li><li>Tension 6</li>
-        </ul>
-        <button class="choose-btn" type="button" data-choose="A · Breath Portal">Choose this direction</button>
+        <h1 id="hero-title">Return from reaction<br>to Soul-led action</h1>
+        <p class="hero-subtitle">A living operating system for body, mind, soul and action.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#field">Enter the field</a>
+          <a class="btn ghost" href="#method">See the method</a>
+        </div>
       </div>
-      <div class="concept-demo portal-demo" aria-hidden="true">
-        <span class="portal-ring r1"></span><span class="portal-ring r2"></span><span class="portal-ring r3"></span><span class="portal-ring r4"></span>
-        <span class="portal-core"></span><span class="gold-comet"></span>
+
+      <div class="infinity-stage" aria-label="Animated Focus Flow infinity field" data-tilt>
+        <div class="deep-glow"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+
+        <svg class="mobius-ribbons" viewBox="0 0 900 520" aria-hidden="true">
+          <defs>
+            <linearGradient id="ribbonPrism" x1="110" y1="420" x2="790" y2="110" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
+              <stop offset=".13" stop-color="#FFF0BE" stop-opacity=".92" />
+              <stop offset=".34" stop-color="#685BFF" stop-opacity=".7" />
+              <stop offset=".55" stop-color="#7EDBFF" stop-opacity=".96" />
+              <stop offset=".78" stop-color="#8D73FF" stop-opacity=".7" />
+              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="goldSweep" x1="120" y1="410" x2="760" y2="90" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
+              <stop offset=".32" stop-color="#FFF0BE" stop-opacity=".98" />
+              <stop offset=".55" stop-color="#7EDBFF" stop-opacity=".12" />
+              <stop offset=".78" stop-color="#FFF0BE" stop-opacity=".88" />
+              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
+            </linearGradient>
+            <filter id="ribbonGlow" x="-20%" y="-45%" width="140%" height="190%">
+              <feGaussianBlur stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .42 0 0 0 0 .55 0 0 0 0 1 0 0 0 .72 0" result="glow" />
+              <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <path class="ribbon ribbon-back" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260C854 94 707 94 582 260C457 426 178 426 112 260Z" />
+          <path class="ribbon ribbon-mid" d="M142 260C204 124 328 124 450 260C572 396 696 396 758 260C820 124 696 124 574 260C452 396 204 396 142 260Z" />
+          <path class="ribbon ribbon-front" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260C854 94 707 94 582 260C457 426 178 426 112 260Z" />
+          <path class="soul-sweep" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260" />
+        </svg>
+
+        <img class="infinity-core" src="assets/focus-flow-logo-reference.jpg" alt="" aria-hidden="true" loading="eager" decoding="async" />
+        <div class="field-caption">Body → Mind → Soul → Action</div>
       </div>
     </section>
 
-    <section id="ritual" class="direction direction-ritual" data-direction="B · Ritual Engine" aria-labelledby="ritual-title">
-      <div class="direction-copy">
-        <p class="concept-label">B · Othership inspired</p>
-        <p class="moment-line">BODY → MIND → SOUL → ACTION</p>
-        <h2 id="ritual-title">Ritual heat engine</h2>
-        <p>More visceral and immersive: heat, breath, pressure, release. Less “meditation app”, more ceremony with a pulse.</p>
-        <ul class="scoreline">
-          <li>Pattern 6</li><li>Function 4</li><li>Tension 7</li>
-        </ul>
-        <button class="choose-btn" type="button" data-choose="B · Ritual Engine">Choose this direction</button>
-      </div>
-      <div class="concept-demo ritual-demo" aria-hidden="true">
-        <span class="heat-sun"></span><span class="heat-orbit h1"></span><span class="heat-orbit h2"></span><span class="heat-smoke s1"></span><span class="heat-smoke s2"></span>
-      </div>
+    <section id="method" class="below-panel">
+      <p class="section-label">Method</p>
+      <h2>The infinity mark becomes the system: signal loops until Soul changes the direction.</h2>
     </section>
 
-    <section id="cosmos" class="direction direction-cosmos" data-direction="C · Breath Cosmos" aria-labelledby="cosmos-title">
-      <div class="direction-copy">
-        <p class="concept-label">C · Open / Breathwrk inspired</p>
-        <p class="moment-line">INHALE <span data-words="FOCUS,SOFTEN,RESET,EXPAND">FOCUS</span></p>
-        <h2 id="cosmos-title">Breath as cosmic interface</h2>
-        <p>Wellness-tech but with myth: the breath becomes a live signal field. Good if we want modern, clean, and still visually spectacular.</p>
-        <ul class="scoreline">
-          <li>Pattern 5</li><li>Function 6</li><li>Tension 5</li>
-        </ul>
-        <button class="choose-btn" type="button" data-choose="C · Breath Cosmos">Choose this direction</button>
-      </div>
-      <div class="concept-demo cosmos-demo" aria-hidden="true">
-        <span class="phone-glass"></span><span class="wave w1"></span><span class="wave w2"></span><span class="wave w3"></span><span class="starfield"></span>
-      </div>
+    <section id="practice" class="below-panel alt">
+      <p class="section-label">Practice</p>
+      <h2>Breath, attention and action become one continuous feedback field.</h2>
     </section>
 
-    <section id="reactor" class="direction direction-reactor" data-direction="D · Soul Reactor" aria-labelledby="reactor-title">
-      <div class="direction-copy">
-        <p class="concept-label">D · Dark horse</p>
-        <p class="moment-line">REACTION <span data-words="→ PAUSE,→ SIGNAL,→ CHOICE,→ ACTION">→ PAUSE</span></p>
-        <h2 id="reactor-title">Soul reactor dashboard</h2>
-        <p>The boldest option: inner operating system as a living cockpit. More masculine, more kinetic, better for motorcyclists and performance-minded men.</p>
-        <ul class="scoreline">
-          <li>Pattern 7</li><li>Function 5</li><li>Tension 7</li>
-        </ul>
-        <button class="choose-btn" type="button" data-choose="D · Soul Reactor">Choose this direction</button>
-      </div>
-      <div class="concept-demo reactor-demo" aria-hidden="true">
-        <span class="gauge g1"></span><span class="gauge g2"></span><span class="gauge g3"></span><span class="reactor-core"></span><span class="dash-line"></span>
-      </div>
+    <section id="field" class="below-panel">
+      <p class="section-label">Field</p>
+      <h2>This is the direction to refine: logo core, Möbius ribbons, orbital motion, gold Soul trace.</h2>
     </section>
   </main>
 
