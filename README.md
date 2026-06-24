@@ -1,3 +1,3 @@
 # Focus Flow
 
-An engineering system for conscious living.
+Sacred engineering for conscious life. Static site prototype.
