@@ -1,96 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Focus Flow — Infinity Field</title>
-  <meta name="description" content="Focus Flow is a living operating system for returning from reaction to Soul-led action." />
+  <title>Focus Flow — conscious living without drama</title>
+  <meta name="description" content="Focus Flow — практика, которая переводит реакцию в осознанное действие через тело, ум, душу и один реальный шаг." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="hero-frequency.css" />
-  <!-- ff-build: infinity-mobius-hero -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="nav-shell" aria-label="Primary navigation">
+  <nav class="topbar" aria-label="Primary navigation">
     <a class="brand" href="#top" aria-label="Focus Flow home">
-      <img class="brand-logo" src="assets/focus-flow-logo-reference.jpg" alt="Focus Flow logo" width="70" height="44" loading="eager" decoding="async" />
+      <span class="brand-mark"><img src="assets/focus-flow-logo-reference.jpg" alt="" /></span>
       <span>Focus Flow</span>
     </a>
-    <button class="menu" type="button" aria-expanded="false" data-menu>Menu</button>
-    <div class="menu-panel" data-menu-panel>
-      <a href="#top">Hero</a>
-      <a href="#method">Method</a>
-      <a href="#practice">Practice</a>
-      <a href="#field">Field</a>
+    <div class="nav-links" aria-label="Sections">
+      <a href="#inside">Виджеты</a>
+      <a href="#voices">Пощупать</a>
+      <a href="#test">Тестировать</a>
     </div>
+    <button class="login" type="button" data-menu>Войти</button>
   </nav>
 
-  <main id="top" class="hero-page">
-    <section class="hero-shell" aria-labelledby="hero-title">
+  <main id="top">
+    <section class="hero">
       <div class="hero-copy">
-        <p class="moment-line">A MOMENT TO <span data-words="REMEMBER,RECONNECT,RETURN,LISTEN,CHOOSE">REMEMBER</span></p>
-        <h1 id="hero-title">Return from reaction<br>to Soul-led action</h1>
-        <p class="hero-subtitle">A living operating system for body, mind, soul and action.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#field">Enter the field</a>
-          <a class="btn ghost" href="#method">See the method</a>
-        </div>
+        <p class="eyebrow">FOCUS FLOW →</p>
+        <h1>Потому что ты опять всё поняла, <span>но не выбрала.</span></h1>
+        <p class="lead">Не курс «стань лучшей версией себя». Просто живой планер состояния: тело показывает сигнал, ум показывает историю, Душа даёт направление, а ты делаешь один реальный шаг.</p>
+        <a class="cta" href="#inside">Попробовать</a>
       </div>
 
-      <div class="infinity-stage" aria-label="Animated Focus Flow infinity field" data-tilt>
-        <div class="deep-glow"></div>
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="orbit orbit-c"></div>
-
-        <svg class="mobius-ribbons" viewBox="0 0 900 520" aria-hidden="true">
-          <defs>
-            <linearGradient id="ribbonPrism" x1="110" y1="420" x2="790" y2="110" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
-              <stop offset=".13" stop-color="#FFF0BE" stop-opacity=".92" />
-              <stop offset=".34" stop-color="#685BFF" stop-opacity=".7" />
-              <stop offset=".55" stop-color="#7EDBFF" stop-opacity=".96" />
-              <stop offset=".78" stop-color="#8D73FF" stop-opacity=".7" />
-              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
-            </linearGradient>
-            <linearGradient id="goldSweep" x1="120" y1="410" x2="760" y2="90" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#D0B05A" stop-opacity="0" />
-              <stop offset=".32" stop-color="#FFF0BE" stop-opacity=".98" />
-              <stop offset=".55" stop-color="#7EDBFF" stop-opacity=".12" />
-              <stop offset=".78" stop-color="#FFF0BE" stop-opacity=".88" />
-              <stop offset="1" stop-color="#D0B05A" stop-opacity="0" />
-            </linearGradient>
-            <filter id="ribbonGlow" x="-20%" y="-45%" width="140%" height="190%">
-              <feGaussianBlur stdDeviation="10" result="blur" />
-              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .42 0 0 0 0 .55 0 0 0 0 1 0 0 0 .72 0" result="glow" />
-              <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-          <path class="ribbon ribbon-back" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260C854 94 707 94 582 260C457 426 178 426 112 260Z" />
-          <path class="ribbon ribbon-mid" d="M142 260C204 124 328 124 450 260C572 396 696 396 758 260C820 124 696 124 574 260C452 396 204 396 142 260Z" />
-          <path class="ribbon ribbon-front" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260C854 94 707 94 582 260C457 426 178 426 112 260Z" />
-          <path class="soul-sweep" d="M112 260C178 94 325 94 450 260C575 426 722 426 788 260" />
-        </svg>
-
-        <img class="infinity-core" src="assets/focus-flow-logo-reference.jpg" alt="" aria-hidden="true" loading="eager" decoding="async" />
-        <div class="field-caption">Body → Mind → Soul → Action</div>
+      <div class="hero-widget" aria-label="Focus Flow demo widget">
+        <span class="sleep-pill">☾ Сон 6.2ч</span>
+        <article class="day-card">
+          <div class="day-head"><span>1</span><strong>Вторник</strong></div>
+          <div class="task lavender"><i></i><strong>Заметить реакцию</strong><small>ТЕЛО</small></div>
+          <div class="task pink"><i></i><strong>Выбрать действие</strong><small>ДУША → ДЕЛО</small></div>
+        </article>
+        <span class="deadline">Автопилот: опять?</span>
+        <span class="timer">● 01:45:12</span>
       </div>
     </section>
 
-    <section id="method" class="below-panel">
-      <p class="section-label">Method</p>
-      <h2>The infinity mark becomes the system: signal loops until Soul changes the direction.</h2>
+    <section class="ticker" aria-label="Focus Flow ticker">
+      <div class="ticker-track">
+        <span>★ ТЕЛО + УМ + ДУША + ДЕЙСТВИЕ = FOCUS FLOW</span>
+        <span>★ ЛЮБИМАЯ КНОПКА «ПАУЗА»</span>
+        <span>★ СПОНСОР ТВОИХ НЕ ПЕРЕНЕСЁННЫХ РЕАКЦИЙ</span>
+        <span>★ НЕ СТРАДАТЬ, А ВЫБИРАТЬ</span>
+        <span>★ ТЕЛО + УМ + ДУША + ДЕЙСТВИЕ = FOCUS FLOW</span>
+      </div>
     </section>
 
-    <section id="practice" class="below-panel alt">
-      <p class="section-label">Practice</p>
-      <h2>Breath, attention and action become one continuous feedback field.</h2>
+    <section id="inside" class="inside">
+      <h2>Что внутри?</h2>
+      <div class="feature-grid">
+        <article class="feature-card pale">
+          <div class="icon">◷</div>
+          <h3>Чувство тела</h3>
+          <p>Сначала не мотивация, не аффирмации и не разбор личности. Сначала — где именно тело говорит «стоп».</p>
+          <div class="mini-player"><button>▶</button><strong>01:45:12</strong><small>BODY TRACKER</small></div>
+        </article>
+        <article class="feature-card lime">
+          <div class="icon dark">✦</div>
+          <h3>Крупные дистанции</h3>
+          <p>Сразу видно, какая реакция к какому старому сценарию относится, где ты залипла, а где уже можешь выбрать иначе.</p>
+          <div class="mini-task"><span></span><strong>Разговор без защиты</strong><small>Relationship OS</small></div>
+          <div class="mini-task"><span class="pink-dot"></span><strong>Один честный шаг</strong><small>Action</small></div>
+        </article>
+        <article class="feature-card purple">
+          <div class="icon">☾</div>
+          <h3>Ресурс</h3>
+          <p>Две кнопки в голове: «сплю» и «встала». Не философия на 200 страниц, а быстрый вход в состояние выбора.</p>
+          <div class="split-actions"><button>⚑ Сплю</button><button>☀ Встала</button></div>
+        </article>
+      </div>
     </section>
 
-    <section id="field" class="below-panel">
-      <p class="section-label">Field</p>
-      <h2>This is the direction to refine: logo core, Möbius ribbons, orbital motion, gold Soul trace.</h2>
+    <section id="voices" class="voices">
+      <div class="voices-head">
+        <h2>Внутренние голоса</h2>
+        <p>Что думает твой мозг, когда ты пытаешься выбрать по-другому.</p>
+      </div>
+      <div class="voice-cloud" aria-label="Cards with inner voices">
+        <article class="voice v1 purple">Мне нужен ещё один курс, чтобы начать.<small>АРХИТЕКТОР</small></article>
+        <article class="voice v2 pink">Просто добавлю ритуалов, чтобы казалось, что я молодец.<small>ИДЕАЛИСТ</small></article>
+        <article class="voice v3 dark">Зато этот паттерн красивый и фиолетовый.<small>ВНУТРЕННИЙ РЕБЁНОК</small></article>
+        <article class="voice v4 lime">В любой непонятной ситуации нажимай «Пауза».<small>ГУРУ</small></article>
+        <article class="voice v5 white">Ого, тело показало правду. Пойду лягу.<small>РЕАЛИСТ</small></article>
+        <article class="voice v6 purple">Где кнопка «пусть оно как-то само»?<small>ЛЕНТЯЙ</small></article>
+        <article class="voice v7 dark">Кто вообще придумал выбирать осознанно по понедельникам?<small>ИСТОРИК</small></article>
+        <article class="voice v8 pink">Я сделала один шаг. Награждаю себя тремя часами скролла.<small>ТИКТОКЕР</small></article>
+        <article class="voice v9 lime">Дедлайн? Я думала, это рекомендация.<small>БУНТАРЬ</small></article>
+        <article class="voice v10 white">Этот метод знает, что я прокрастинирую, и не осуждает.<small>ЗДРАВЫЙ СМЫСЛ</small></article>
+        <article class="voice v11 dark">Главное — красиво разложить теги.<small>ПЕРФЕКЦИОНИСТ</small></article>
+        <article class="voice v12 pink">Я не ленивая, я энергосберегающая.<small>ЭСТЕТ</small></article>
+      </div>
+    </section>
+
+    <section id="test" class="closing">
+      <h2>Один экран. Один сигнал. Один выбор.</h2>
+      <p>Никакой духовной бухгалтерии. Focus Flow нужен, чтобы поймать момент между реакцией и действием.</p>
+      <a class="cta" href="#top">Вернуться наверх</a>
     </section>
   </main>
 
