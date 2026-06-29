@@ -1,183 +1,112 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Focus Flow — Living Sacred OS</title>
-  <meta name="description" content="Focus Flow is a living operating system for returning from reaction to Soul-led action." />
+  <title>Focus Flow — conscious living without drama</title>
+  <meta name="description" content="Focus Flow — практика, которая переводит реакцию в осознанное действие через тело, ум, душу и один реальный шаг." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <!-- ff-build: breath-prism-public-trigger-20260617165320 -->
 </head>
 <body>
-  <nav class="nav-shell" aria-label="Primary">
+  <nav class="topbar" aria-label="Primary navigation">
     <a class="brand" href="#top" aria-label="Focus Flow home">
-      <span class="brand-glyph"></span>
+      <span class="brand-mark"><img src="assets/focus-flow-logo-reference.jpg" alt="" /></span>
       <span>Focus Flow</span>
     </a>
-    <button class="breath-toggle" type="button" aria-label="Toggle breath field" data-breath-toggle>
-      <span></span>
-    </button>
-    <button class="menu" type="button" aria-label="Open menu" data-menu>Menu</button>
-    <div class="menu-panel" data-menu-panel>
-      <a href="#method">Method</a>
-      <a href="#practice">Practice</a>
-      <a href="#sessions">States</a>
-      <a href="#top">Soul</a>
+    <div class="nav-links" aria-label="Sections">
+      <a href="#inside">Виджеты</a>
+      <a href="#voices">Пощупать</a>
+      <a href="#test">Тестировать</a>
     </div>
+    <button class="login" type="button" data-menu>Войти</button>
   </nav>
 
-  <header id="top" class="hero section-gray">
-    <div class="hero-art" aria-hidden="true">
-      <video class="hero-video" autoplay muted loop playsinline><source src="assets/hero-placeholder.mp4" type="video/mp4"></video>
-      <div class="hero-video-wash"></div>
-      <canvas id="field-canvas"></canvas>
-      <div class="breath-rings">
-        <span></span><span></span><span></span>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FOCUS FLOW →</p>
+        <h1>Потому что ты опять всё поняла, <span>но не выбрала.</span></h1>
+        <p class="lead">Не курс «стань лучшей версией себя». Просто живой планер состояния: тело показывает сигнал, ум показывает историю, Душа даёт направление, а ты делаешь один реальный шаг.</p>
+        <a class="cta" href="#inside">Попробовать</a>
       </div>
-      <div class="infinity-mark">
-        <i></i><i></i><b></b>
-      </div>
-    </div>
-    <div class="hero-copy">
-      <p class="kicker">A living system for conscious life</p>
-      <h1>RETURN FROM REACTION<br>TO SOUL-LED ACTION</h1>
-      <div class="hero-actions">
-        <a href="#practice" class="btn primary">Enter the field</a>
-        <a href="#method" class="btn ghost">See the method</a>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <section class="white-space" aria-label="breathing pause">
-      <p class="float-word word-1">body</p>
-      <p class="float-word word-2">mind</p>
-      <p class="float-word word-3">soul</p>
+      <div class="hero-widget" aria-label="Focus Flow demo widget">
+        <span class="sleep-pill">☾ Сон 6.2ч</span>
+        <article class="day-card">
+          <div class="day-head"><span>1</span><strong>Вторник</strong></div>
+          <div class="task lavender"><i></i><strong>Заметить реакцию</strong><small>ТЕЛО</small></div>
+          <div class="task pink"><i></i><strong>Выбрать действие</strong><small>ДУША → ДЕЛО</small></div>
+        </article>
+        <span class="deadline">Автопилот: опять?</span>
+        <span class="timer">● 01:45:12</span>
+      </div>
     </section>
 
-    <section id="method" class="study-grid section-stone">
-      <article class="visual-card image-card">
-        <div class="soft-photo">
-          <div class="photo-noise"></div>
-          <div class="tree-lines"></div>
-          <div class="human-dot one"></div>
-          <div class="human-dot two"></div>
-        </div>
-        <div class="overlay-note">
-          <span>Field note</span>
-          <p>Not another productivity frame. A way to hear the body before the mind turns it into a story.</p>
-          <a>Read more</a>
-        </div>
-      </article>
-      <article class="text-panel">
-        <p class="label">Core movement</p>
-        <h2>Focus Flow maps the moment between signal and choice.</h2>
-        <p>The body speaks first. The mind translates through old programs. Soul gives direction. Action integrates the new path.</p>
-        <ul class="line-list">
-          <li><span>01</span> Notice the signal before it becomes drama</li>
-          <li><span>02</span> Separate the program from the person</li>
-          <li><span>03</span> Let Soul become the organizing signal</li>
-        </ul>
-      </article>
+    <section class="ticker" aria-label="Focus Flow ticker">
+      <div class="ticker-track">
+        <span>★ ТЕЛО + УМ + ДУША + ДЕЙСТВИЕ = FOCUS FLOW</span>
+        <span>★ ЛЮБИМАЯ КНОПКА «ПАУЗА»</span>
+        <span>★ СПОНСОР ТВОИХ НЕ ПЕРЕНЕСЁННЫХ РЕАКЦИЙ</span>
+        <span>★ НЕ СТРАДАТЬ, А ВЫБИРАТЬ</span>
+        <span>★ ТЕЛО + УМ + ДУША + ДЕЙСТВИЕ = FOCUS FLOW</span>
+      </div>
     </section>
 
-    <section id="practice" class="practice section-stone">
-      <p class="label center">Daily Practice</p>
-      <h2>Your inner operating system,<br>felt in the body.</h2>
-      <p class="section-intro">A daily rhythm for nervous system regulation, attention, choice and embodied action. Not tracking. Not forcing. Returning.</p>
-      <a href="#sessions" class="btn dark">Begin with one practice</a>
-
-      <div class="orbit-layout">
-        <article class="mini-card left-top">
-          <span class="mini-icon">I</span>
-          <h3>Body signal</h3>
-          <p>Where does the moment land — throat, chest, belly, skin?</p>
+    <section id="inside" class="inside">
+      <h2>Что внутри?</h2>
+      <div class="feature-grid">
+        <article class="feature-card pale">
+          <div class="icon">◷</div>
+          <h3>Чувство тела</h3>
+          <p>Сначала не мотивация, не аффирмации и не разбор личности. Сначала — где именно тело говорит «стоп».</p>
+          <div class="mini-player"><button>▶</button><strong>01:45:12</strong><small>BODY TRACKER</small></div>
         </article>
-        <article class="mini-card right-top">
-          <span class="mini-icon">II</span>
-          <h3>Program</h3>
-          <p>Which automatic role starts speaking before you choose?</p>
+        <article class="feature-card lime">
+          <div class="icon dark">✦</div>
+          <h3>Крупные дистанции</h3>
+          <p>Сразу видно, какая реакция к какому старому сценарию относится, где ты залипла, а где уже можешь выбрать иначе.</p>
+          <div class="mini-task"><span></span><strong>Разговор без защиты</strong><small>Relationship OS</small></div>
+          <div class="mini-task"><span class="pink-dot"></span><strong>Один честный шаг</strong><small>Action</small></div>
         </article>
-        <div class="phone-ritual" aria-hidden="true">
-          <div class="phone-screen">
-            <span>Focus Flow</span>
-            <h3>Pause.<br>Listen.<br>Choose.</h3>
-            <ul>
-              <li>body: signal</li>
-              <li>mind: pattern</li>
-              <li>soul: direction</li>
-            </ul>
-          </div>
-        </div>
-        <article class="mini-card left-bottom">
-          <span class="mini-icon">III</span>
-          <h3>Soul direction</h3>
-          <p>What feels true when the noise drops?</p>
-        </article>
-        <article class="mini-card right-bottom">
-          <span class="mini-icon">IV</span>
-          <h3>Embodied action</h3>
-          <p>One small action that makes the new path real.</p>
+        <article class="feature-card purple">
+          <div class="icon">☾</div>
+          <h3>Ресурс</h3>
+          <p>Две кнопки в голове: «сплю» и «встала». Не философия на 200 страниц, а быстрый вход в состояние выбора.</p>
+          <div class="split-actions"><button>⚑ Сплю</button><button>☀ Встала</button></div>
         </article>
       </div>
     </section>
 
-    <section id="sessions" class="sessions section-stone">
-      <h2>Practices for every<br>state of being</h2>
-      <p class="section-intro narrow">Choose the entry point that matches the state you are actually in — not the person you think you should be.</p>
-      <div class="session-row">
-        <article class="session-card"><div class="session-image img-1"><span>I</span></div><h3>Return from reaction</h3><p>For the moment when the program is already running.</p></article>
-        <article class="session-card"><div class="session-image img-2"><span>II</span></div><h3>Find the body signal</h3><p>For when everything is mental but nothing is moving.</p></article>
-        <article class="session-card"><div class="session-image img-3"><span>III</span></div><h3>Choose from Soul</h3><p>For the quiet threshold before action.</p></article>
-        <article class="session-card"><div class="session-image img-4"><span>IV</span></div><h3>Integrate in action</h3><p>For making insight visible in real life.</p></article>
+    <section id="voices" class="voices">
+      <div class="voices-head">
+        <h2>Внутренние голоса</h2>
+        <p>Что думает твой мозг, когда ты пытаешься выбрать по-другому.</p>
       </div>
-      <p class="closing-line">Every practice guides you back into presence. Through body, attention and action, the system softens, the mind clears, and choice returns.</p>
+      <div class="voice-cloud" aria-label="Cards with inner voices">
+        <article class="voice v1 purple">Мне нужен ещё один курс, чтобы начать.<small>АРХИТЕКТОР</small></article>
+        <article class="voice v2 pink">Просто добавлю ритуалов, чтобы казалось, что я молодец.<small>ИДЕАЛИСТ</small></article>
+        <article class="voice v3 dark">Зато этот паттерн красивый и фиолетовый.<small>ВНУТРЕННИЙ РЕБЁНОК</small></article>
+        <article class="voice v4 lime">В любой непонятной ситуации нажимай «Пауза».<small>ГУРУ</small></article>
+        <article class="voice v5 white">Ого, тело показало правду. Пойду лягу.<small>РЕАЛИСТ</small></article>
+        <article class="voice v6 purple">Где кнопка «пусть оно как-то само»?<small>ЛЕНТЯЙ</small></article>
+        <article class="voice v7 dark">Кто вообще придумал выбирать осознанно по понедельникам?<small>ИСТОРИК</small></article>
+        <article class="voice v8 pink">Я сделала один шаг. Награждаю себя тремя часами скролла.<small>ТИКТОКЕР</small></article>
+        <article class="voice v9 lime">Дедлайн? Я думала, это рекомендация.<small>БУНТАРЬ</small></article>
+        <article class="voice v10 white">Этот метод знает, что я прокрастинирую, и не осуждает.<small>ЗДРАВЫЙ СМЫСЛ</small></article>
+        <article class="voice v11 dark">Главное — красиво разложить теги.<small>ПЕРФЕКЦИОНИСТ</small></article>
+        <article class="voice v12 pink">Я не ленивая, я энергосберегающая.<small>ЭСТЕТ</small></article>
+      </div>
     </section>
 
-    <section class="deep-gray">
-      <div>
-        <p class="label light">Living methodology</p>
-        <h2>How Focus Flow transforms the inner system</h2>
-        <p>Not by adding more pressure. By changing the place you act from.</p>
-      </div>
-      <div class="slow-axis" aria-hidden="true"><span></span><span></span><span></span></div>
-    </section>
-
-    <section class="container-section section-ivory">
-      <article class="large-card">
-        <p class="label">First container</p>
-        <h2>Daily Focus Flow practice</h2>
-        <p>A small living protocol for returning to body, seeing the program, hearing Soul and choosing one embodied action.</p>
-        <a class="btn dark" href="#top">Start here</a>
-        <ul class="line-list compact">
-          <li><span>01</span> 10-minute guided return</li>
-          <li><span>02</span> Body / Mind / Soul map</li>
-          <li><span>03</span> One action, not another insight</li>
-        </ul>
-      </article>
-      <aside class="small-note">
-        <span>Location</span>
-        <p>Online field · voice notes · living map · weekly synthesis.</p>
-      </aside>
+    <section id="test" class="closing">
+      <h2>Один экран. Один сигнал. Один выбор.</h2>
+      <p>Никакой духовной бухгалтерии. Focus Flow нужен, чтобы поймать момент между реакцией и действием.</p>
+      <a class="cta" href="#top">Вернуться наверх</a>
     </section>
   </main>
-
-  <footer>
-    <div>
-      <h2>Take your practice<br>with you</h2>
-      <a class="btn ivory" href="#top">Enter the field</a>
-    </div>
-    <nav>
-      <a href="#method">Method</a>
-      <a href="#practice">Practice</a>
-      <a href="#sessions">States</a>
-      <a href="#top">Soul</a>
-    </nav>
-    <span class="footer-dot"></span>
-  </footer>
 
   <script src="script.js"></script>
 </body>
