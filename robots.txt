@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://focus-flow-sacred-engineering.vercel.app/sitemap.xml
